@@ -1,4 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Custom React Slider
+ 
+Features simple slider which allows you to display any kind of HTML content as long as it is added into **sliderArr** (array of slider objects). Also provides slide navigation.  
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Follow these instructions to set up enviroment and replace default files with the project afterwards.  
+To enable SASS processing run following command:  
+
+### `npm install sass-loader node-sass --save-dev`
 
 ## Available Scripts
 
