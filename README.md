@@ -1,10 +1,38 @@
 # Custom React Slider
  
-Features simple slider which allows you to display any kind of HTML content as long as it is added into **sliderArr** (array of slider objects). Also provides slide navigation.  
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Follow these instructions to set up enviroment and replace default files with the project afterwards.  
+Features simple slider which allows you to display any kind of HTML content as long as it is added into **sliderArr** (array of slider objects). Also provides slide navigation and supports swiping to scroll slides on mobile devices.  
+## Setting up environment
+**You’ll need to have Node 8.16.0 or Node 10.16.0 or later version on your local development machine** (but it’s not required on the server). You can use [nvm](https://github.com/creationix/nvm#installation) (macOS/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows) to switch Node versions between different projects.
+
+To create a new app, you may choose one of the following methods:
+
+### npx
+
+```sh
+npx create-react-app my-app
+```
+
+_([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is a package runner tool that comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
+
+### npm
+
+```sh
+npm init react-app my-app
+```
+
+_`npm init <initializer>` is available in npm 6+_
+
+### Yarn
+
+```sh
+yarn create react-app my-app
+```
+Follow these instructions to set up environment and replace default *public* and *src* folders with the project afterwards.  
 To enable SASS processing run following command:  
 
 ### `npm install sass-loader node-sass --save-dev`
+
+You can also simply download build folder and launch **index.html** to check how slider works without setting up React application.
 
 ## Available Scripts
 
