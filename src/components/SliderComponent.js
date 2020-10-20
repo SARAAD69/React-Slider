@@ -9,7 +9,7 @@ import image5 from "../images/5.jpg"
 
 
 function Slider(props) {
-    
+    // array of slides content
     let sliderArr = [
         <ImgComponent src={image1} />, 
         <ImgComponent src={image2} />, 
@@ -22,6 +22,7 @@ function Slider(props) {
             <textarea defaultValue="Example"></textarea>
         </div>
     ]
+    // creating navigation buttons
     let buttons = []
     const buttonlist = (i) => {
         for (let i = 1; i <= sliderArr.length; i++) {
@@ -29,25 +30,14 @@ function Slider(props) {
           }
           return buttons;
     }
+    // setting up variables for swipe handling
     const [x, setX] = useState(0)
     const [direction, setDirection] = useState('')
     const [swiped, setSwiped] = useState(false)
-    useEffect(() => {
-        if(swiped === true) 
-        {
-            if(direction === 'right to left') 
-            {
-                document.getElementById('next').click(); 
-                setSwiped(false);
-            } else {
-                document.getElementById('prev').click(); 
-                setSwiped(false);
-            }
-        }
-    })
     let _swipe = {}
     const minDistance = 50
 
+    //swipe detection and determining direction
     const _onTouchStart = (e) => {
         const touch = e.touches[0];
         _swipe = { x: touch.clientX };
@@ -71,7 +61,22 @@ function Slider(props) {
         _swipe = {};
       }
 
+      // executing change of slides on swiping
+      useEffect(() => {
+        if(swiped === true) 
+        {
+            if(direction === 'right to left') 
+            {
+                document.getElementById('next').click(); 
+                setSwiped(false);
+            } else {
+                document.getElementById('prev').click(); 
+                setSwiped(false);
+            }
+        }
+    })
 
+    // functions to move slides
     const showPrev = () => {
         x === 0 ? setX(-100 * (sliderArr.length - 1)) : setX(x + 100);
     }
